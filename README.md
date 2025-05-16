@@ -13,7 +13,7 @@ It interacts with the JSONPlaceholder API to display posts, users, and their tas
 
 - Tapping on a user name navigates to User Details.
 
-![1](https://github.com/user-attachments/assets/7abe31d4-10de-40c1-bf40-dad4b785d30e)
+![1](https://github.com/user-attachments/assets/06ac85f7-df1c-42a4-b8b3-941d2fc98462)
 
 
 ✅ Post Details Screen:
@@ -24,7 +24,7 @@ It interacts with the JSONPlaceholder API to display posts, users, and their tas
 
 - Easy navigation back to the main screen.
 
-  ![2](https://github.com/user-attachments/assets/d61b236a-c5e7-4961-97b6-87e438e81247)
+![2](https://github.com/user-attachments/assets/92e00fcb-06e5-4a00-be7d-3328aaca58a6)
 
 
 ✅ User Details Screen:
@@ -35,7 +35,7 @@ It interacts with the JSONPlaceholder API to display posts, users, and their tas
 
 - Scrollable tasks list with clear visual indicators.
 
-  ![3](https://github.com/user-attachments/assets/9b7dfc4d-7ebc-4ee6-89a7-01a32f1011f2)
+![3](https://github.com/user-attachments/assets/53828942-3926-4c23-b275-0494e5d33e9c)
 
 
 ✅ Loading & Error States:
@@ -44,7 +44,7 @@ It interacts with the JSONPlaceholder API to display posts, users, and their tas
 
 - User-friendly error messages with retry options on network failure.
 
-  ![4](https://github.com/user-attachments/assets/61d653a2-4215-4827-a001-65339f744bb7)
+![4](https://github.com/user-attachments/assets/e0be0d43-49c7-483d-a7b1-75475a640dd9)
 
 
 🛠️ Tech Stack:
