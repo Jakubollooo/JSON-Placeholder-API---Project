@@ -1,63 +1,91 @@
-# JSON-Placeholder-API---Project
-📱 JSONPlaceholder API - Android App
-This is an Android mobile application built with Kotlin and Jetpack Compose, following the MVVM architecture.
-It interacts with the JSONPlaceholder API to display posts, users, and their tasks (todos).
+📱 JSONPLACEHOLDER API – ANDROID APP
+A MODERN ANDROID APPLICATION BUILT IN KOTLIN WITH JETPACK COMPOSE, FOLLOWING MVVM ARCHITECTURE AND THE REPOSITORY PATTERN. IT INTERACTS WITH THE JSONPLACEHOLDER API TO DISPLAY POSTS, USERS, TODOS, AND MORE.
 
-✨ Key Features:
+✨ Key Features
+✅ Main Screen (Posts)
+Scrollable list of posts with author names.
 
-✅ Main Screen: Scrollable list of posts combined with user information.
+Tap a post → View Post Details.
 
-- Displays post titles and author names.
+Tap a user name → View User Details.
 
-- Tapping on a post navigates to Post Details.
+❤️ Like posts — liked posts appear at the top.
 
-- Tapping on a user name navigates to User Details.
+📊 Like counter (liked / total posts).
 
-![1](https://github.com/user-attachments/assets/06ac85f7-df1c-42a4-b8b3-941d2fc98462)
-
-
-✅ Post Details Screen:
-
-- Shows full post title and content.
-
-- Displays post author's ID.
-
-- Easy navigation back to the main screen.
-
-![2](https://github.com/user-attachments/assets/92e00fcb-06e5-4a00-be7d-3328aaca58a6)
+![likeowanienowe](https://github.com/user-attachments/assets/b61125ee-ec22-4841-a5b4-6e4dd51ab058)
 
 
-✅ User Details Screen:
+✅ Likes persist between sessions (DataStore).
 
-- Full user information (name, username, email, phone, website, address, company).
+✅ Post Details Screen
+Full post content.
 
-- List of user's tasks (todos) with completion status.
+Displays author's ID.
 
-- Scrollable tasks list with clear visual indicators.
+Back navigation.
 
-![3](https://github.com/user-attachments/assets/53828942-3926-4c23-b275-0494e5d33e9c)
+✅ User Details Screen
+
+![osoba](https://github.com/user-attachments/assets/b1374e1f-9981-416d-b83a-56a878b91ff7)
+
+Full user profile:
+
+Name, username, email, phone, website.
+
+Address (city, street, zip).
+
+Company name & catchphrase.
+
+List of todos with check status.
+
+📍 User markers on Google Map (based on address geo).
+
+✅ Profile Screen (NEW!)
+
+![profilnowePOP](https://github.com/user-attachments/assets/3bac2386-6bfc-4cd7-93b7-c85ff6f71ddf)
 
 
-✅ Loading & Error States:
+👤 Create personal profile (first & last name).
 
-- Loading indicators while fetching data.
+📷 Add/change profile picture.
 
-- User-friendly error messages with retry options on network failure.
+📍 Display your location on Google Map.
 
-![4](https://github.com/user-attachments/assets/e0be0d43-49c7-483d-a7b1-75475a640dd9)
+🧹 Option to clear/reset profile.
 
+💾 All profile data saved locally (Preferences DataStore).
 
-🛠️ Tech Stack:
+✅ Dark Mode Support
+
+![ciemnymotywnowe](https://github.com/user-attachments/assets/1894a140-5e03-4d87-a4c8-d1c6e2d696f6)
+
+🌓 Toggle dark/light theme manually.
+
+🌙 Theme preference saved automatically (DataStore).
+
+✅ Robust UX
+Loading spinners during data fetch.
+
+![bladnowe](https://github.com/user-attachments/assets/ab1b68be-da19-4e1e-b0c9-f4df67a4e19d)
+
+User-friendly error messages and retry buttons on failure.
+
+🧱 Tech Stack
 Kotlin (100%)
 
-- Jetpack Compose (UI framework)
+Jetpack Compose – declarative UI framework
 
-- Retrofit (network communication)
+Retrofit – REST API client
 
-- Kotlin Coroutines + Flow (async data handling)
+Kotlin Coroutines + Flow – async data handling
 
-- Jetpack Compose Navigation (navigation between screens)
+Jetpack Navigation – for screen transitions
 
-- MVVM Architecture (separation of concerns, reactive UI)
+Google Maps Compose – interactive maps
 
-- Repository Pattern (clean data layer abstraction)
+MVVM Architecture – clean UI/viewmodel separation
+
+Repository Pattern – abstracted data layer
+
+Preferences DataStore – for local persistence
