@@ -89,4 +89,19 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.androidx.material.icons.core)
     implementation(libs.androidx.material.icons.extended)
+
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
+
+    // Google Maps
+    implementation(libs.google.play.services.maps)
+    implementation(libs.google.maps.compose)
+
+    // Location Services
+    implementation(libs.google.play.services.location)
+
+    // Permissions
+    implementation(libs.accompanist.permissions)
+
+
 }

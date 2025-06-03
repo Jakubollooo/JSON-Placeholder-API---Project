@@ -7,10 +7,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.jsonplaceholderapi.ui.postdetail.PostDetailScreen
 import com.example.jsonplaceholderapi.ui.posts.PostsScreen
+import com.example.jsonplaceholderapi.ui.postdetail.PostDetailScreen
 import com.example.jsonplaceholderapi.ui.userdetail.UserDetailScreen
-import com.example.jsonplaceholderapi.viewmodel.*
+import com.example.jsonplaceholderapi.ui.profile.ProfileScreen
+import com.example.jsonplaceholderapi.viewmodel.PostsViewModel
+import com.example.jsonplaceholderapi.viewmodel.PostDetailViewModel
+import com.example.jsonplaceholderapi.viewmodel.UserDetailViewModel
 
 @Composable
 fun AppNavGraph(
@@ -20,6 +23,7 @@ fun AppNavGraph(
     userDetailViewModel: UserDetailViewModel
 ) {
     NavHost(navController = navController, startDestination = Screen.Posts.route) {
+
         composable(Screen.Posts.route) {
             PostsScreen(
                 viewModel = postsViewModel,
@@ -28,14 +32,18 @@ fun AppNavGraph(
                 },
                 onUserClick = { userId ->
                     navController.navigate(Screen.UserDetail.createRoute(userId))
+                },
+                onProfileClick = {
+                    navController.navigate(Screen.Profile.route)
                 }
             )
         }
+
         composable(
-            Screen.PostDetail.route,
+            route = Screen.PostDetail.route,
             arguments = listOf(navArgument("postId") { type = NavType.IntType })
         ) { backStackEntry ->
-            val postId = backStackEntry.arguments?.getInt("postId") ?: 0
+            val postId = backStackEntry.arguments?.getInt("postId") ?: return@composable
             PostDetailScreen(
                 postId = postId,
                 viewModel = postDetailViewModel,
@@ -45,15 +53,23 @@ fun AppNavGraph(
                 }
             )
         }
+
         composable(
-            Screen.UserDetail.route,
+            route = Screen.UserDetail.route,
             arguments = listOf(navArgument("userId") { type = NavType.IntType })
         ) { backStackEntry ->
-            val userId = backStackEntry.arguments?.getInt("userId") ?: 0
+            val userId = backStackEntry.arguments?.getInt("userId") ?: return@composable
             UserDetailScreen(
                 userId = userId,
                 viewModel = userDetailViewModel,
                 onBackClick = { navController.navigateUp() }
+            )
+        }
+
+        composable(Screen.Profile.route) {
+            ProfileScreen(
+                navController = navController,
+                postsViewModel = postsViewModel
             )
         }
     }
